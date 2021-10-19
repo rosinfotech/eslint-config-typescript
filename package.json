@@ -1,6 +1,6 @@
 {
     "name": "@rosinfo.tech/eslint-config-typescript",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "access": "public",
     "main": "index.js",
     "publishConfig": {

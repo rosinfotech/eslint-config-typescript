@@ -20,5 +20,17 @@
             "/npm/"
         ]
     },
-    "version": "0.0.13"
+    "publish": {
+        "dir": "npm",
+        "filesProcessor": [
+            [
+                "copy",
+                {
+                    "./index.js": "./npm/index.js",
+                    "./package.json": "./npm/package.json"
+                }
+            ]
+        ]
+    },
+    "version": "0.0.14"
 }
