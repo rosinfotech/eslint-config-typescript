@@ -95,8 +95,17 @@ module.exports = {
             1,
             4,
             {
+                "CallExpression": {
+                    "arguments": "first"
+                },
+                "FunctionDeclaration": {
+                    "body": 1,
+                    "parameters": 0
+                },
+                "MemberExpression": 4,
                 "SwitchCase": 1,
-                "ignoreComments": false
+                "ignoreComments": false,
+                "outerIIFEBody": 0
             }
         ],
         "keyword-spacing": 0,
@@ -387,12 +396,7 @@ module.exports = {
                 "variableDeclarationIgnoreFunction": true
             }
         ],
-        "@typescript-eslint/unbound-method": [
-            1,
-            {
-                "ignoreStatic": true
-            }
-        ],
+        "@typescript-eslint/unbound-method": 0,
         "@typescript-eslint/unified-signatures": 1
     }
 }

@@ -1,0 +1,6 @@
+Update cycle:
+
+1) rosinfo.tech version_increment_patch
+2) implement
+3) rosinfo.tech shell git_commit_version_push
+4) rosinfo.tech publish
