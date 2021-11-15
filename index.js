@@ -98,7 +98,7 @@ module.exports = {
                     "parameters": "first"
                 },
                 "ignoreComments": false,
-                "MemberExpression": 4,
+                "MemberExpression": 1,
                 "outerIIFEBody": 0,
                 "SwitchCase": 1
             }
