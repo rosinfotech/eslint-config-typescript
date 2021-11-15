@@ -95,7 +95,7 @@ module.exports = {
                 },
                 "FunctionDeclaration": {
                     "body": 1,
-                    "parameters": 0
+                    "parameters": "first"
                 },
                 "ignoreComments": false,
                 "MemberExpression": 4,
