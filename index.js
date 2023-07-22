@@ -2,13 +2,13 @@ module.exports = {
     "rules": {
         "@typescript-eslint/adjacent-overload-signatures": 1,
         "@typescript-eslint/array-type": [
-            1,
+            2,
             {
-                "default": "array-simple",
-                "readonly": "array-simple"
+                "default": "generic",
+                "readonly": "generic"
             }
         ],
-        "@typescript-eslint/await-thenable": 1,
+        "@typescript-eslint/await-thenable": 2,
         "@typescript-eslint/ban-ts-comment": [
             1,
             {
@@ -62,9 +62,10 @@ module.exports = {
         ],
         "@typescript-eslint/consistent-type-assertions": 0,
         "@typescript-eslint/consistent-type-definitions": [
-            1,
+            2,
             "interface"
         ],
+        "@typescript-eslint/consistent-type-imports": 2,
         "@typescript-eslint/default-param-last": 1,
         "@typescript-eslint/dot-notation": 1,
         "@typescript-eslint/explicit-function-return-type": 0,
@@ -124,7 +125,8 @@ module.exports = {
                 "singleline": {
                     "delimiter": "semi",
                     "requireLast": false
-                }
+                },
+                "multilineDetection": "brackets"
             }
         ],
         "@typescript-eslint/member-ordering": [
@@ -218,10 +220,27 @@ module.exports = {
             }
         ],
         "@typescript-eslint/method-signature-style": [
-            1,
+            2,
             "property"
         ],
-        "@typescript-eslint/naming-convention": 0,
+        "@typescript-eslint/naming-convention": [
+            2,
+            {
+                "selector": "interface",
+                "format": null,
+                "prefix": ["I"],
+            },
+            {
+                "selector": "typeAlias",
+                "format": null,
+                "prefix": ["T"]
+            },
+            {
+                "selector": "enum",
+                "format": null,
+                "prefix": ["E"]
+            }
+        ],
         "@typescript-eslint/no-array-constructor": 1,
         "@typescript-eslint/no-base-to-string": 1,
         "@typescript-eslint/no-confusing-non-null-assertion": 1,
@@ -235,7 +254,7 @@ module.exports = {
             }
         ],
         "@typescript-eslint/no-explicit-any": 0,
-        "@typescript-eslint/no-extra-non-null-assertion": 1,
+        "@typescript-eslint/no-extra-non-null-assertion": 2,
         "@typescript-eslint/no-extra-parens": [
             1,
             "all",
@@ -342,7 +361,7 @@ module.exports = {
                 "allowTernary": false
             }
         ],
-        "@typescript-eslint/no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": 2,
         "@typescript-eslint/no-use-before-define": [
             1,
             {
@@ -358,7 +377,7 @@ module.exports = {
         "@typescript-eslint/prefer-as-const": 1,
         "@typescript-eslint/prefer-for-of": 1,
         "@typescript-eslint/prefer-function-type": 1,
-        "@typescript-eslint/prefer-includes": 1,
+        "@typescript-eslint/prefer-includes": 2,
         "@typescript-eslint/prefer-literal-enum-member": 1,
         "@typescript-eslint/prefer-namespace-keyword": 1,
         "@typescript-eslint/prefer-nullish-coalescing": 1,
@@ -367,7 +386,7 @@ module.exports = {
         "@typescript-eslint/prefer-readonly-parameter-types": 0,
         "@typescript-eslint/prefer-reduce-type-parameter": 1,
         "@typescript-eslint/prefer-regexp-exec": 1,
-        "@typescript-eslint/prefer-string-starts-ends-with": 1,
+        "@typescript-eslint/prefer-string-starts-ends-with": 2,
         "@typescript-eslint/prefer-ts-expect-error": 1,
         "@typescript-eslint/promise-function-async": 1,
         "@typescript-eslint/quotes": [

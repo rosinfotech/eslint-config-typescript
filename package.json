@@ -1,6 +1,6 @@
 {
     "name": "@rosinfo.tech/eslint-config-typescript",
-    "version": "0.0.19",
+    "version": "0.0.21",
     "access": "public",
     "main": "index.js",
     "publishConfig": {
@@ -19,8 +19,8 @@
         "rosinfotech"
     ],
     "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.1.0",
-        "@typescript-eslint/parser": "^5.1.0"
+        "@typescript-eslint/eslint-plugin": "^6.1.0",
+        "@typescript-eslint/parser": "^6.1.0"
     },
     "peerDependencies": {
         "eslint": ">= 3",
