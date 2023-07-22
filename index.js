@@ -228,7 +228,7 @@ module.exports = {
             {
                 "selector": "interface",
                 "format": null,
-                "prefix": ["I"],
+                "prefix": ["I"]
             },
             {
                 "selector": "typeAlias",
