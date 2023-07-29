@@ -65,7 +65,13 @@ module.exports = {
             2,
             "interface"
         ],
-        "@typescript-eslint/consistent-type-imports": 2,
+        "@typescript-eslint/consistent-type-imports": [
+            2,
+            {
+                "fixStyle": "separate-type-imports",
+                "prefer": "type-imports"
+            }
+        ],
         "@typescript-eslint/default-param-last": 1,
         "@typescript-eslint/dot-notation": 1,
         "@typescript-eslint/explicit-function-return-type": 0,
