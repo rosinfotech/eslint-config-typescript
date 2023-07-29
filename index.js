@@ -478,6 +478,8 @@ module.exports = {
         "quotes": 0,
         "return-await": 0,
         "semi": 0,
-        "space-before-function-paren": 0
+        "space-before-function-paren": 0,
+        "typescript-sort-keys/interface": 2,
+        "typescript-sort-keys/string-enum": 2
     }
 };
