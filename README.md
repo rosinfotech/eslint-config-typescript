@@ -78,3 +78,38 @@ export default [
     eslintConfigPrettier,
 ];
 ```
+
+## TypeScript 7+ (native) compatibility
+
+`typescript@7` is the native (Go-based) compiler: it does not ship the JavaScript compiler
+API that `typescript-eslint` requires for parsing and type-aware linting. This config declares
+`"typescript": ">=4.8.4"` with no upper bound, so it installs cleanly in TypeScript 7+ projects.
+
+For a TypeScript 7 project, follow the
+[official side-by-side setup](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0):
+alias `typescript` to the JS-based compatibility package `@typescript/typescript6`
+(feature-aligned with TypeScript 7) and alias TypeScript 7 under a separate name:
+
+```json
+// package.json
+{
+    "devDependencies": {
+        "@rosinfo.tech/eslint-config-typescript": "^0.1.0",
+        "@typescript/native": "npm:typescript@^7.0.2",
+        "eslint": "^9.0.0 || ^10.0.0",
+        "typescript": "npm:@typescript/typescript6@^6.0.2",
+        "typescript-eslint": "^8.67.0"
+    }
+}
+```
+
+With this setup:
+
+```sh
+npx tsc --noEmit   # runs TypeScript 7 (native)
+npx eslint .       # typescript-eslint lints via the TypeScript 6 API
+```
+
+`typescript-eslint` is expected to gain native TypeScript >=7.1 support once TypeScript 7.1
+ships its new API; until then the alias setup above is the supported path.
+
